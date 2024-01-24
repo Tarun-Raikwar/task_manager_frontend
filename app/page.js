@@ -19,7 +19,7 @@ const page = () => {
         console.log("submit");
 
         try {
-            const response = await fetch("http://192.168.0.108:4000/add", {
+            const response = await fetch("https://task-manager-backend-po7a.onrender.com/add", {
                 method: "POST", // or 'PUT'
                 headers: {
                     "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const page = () => {
     };
 
     useEffect(() => {
-        fetch("http://192.168.0.108:4000")
+        fetch("https://task-manager-backend-po7a.onrender.com")
             .then(res => res.json())
             .then(data => {
                 console.log(data.data);
@@ -53,7 +53,7 @@ const page = () => {
 
     const deleteHandler = async (t, i) => {
         try {
-            const response = await fetch("http://192.168.0.108:4000/delete", {
+            const response = await fetch("https://task-manager-backend-po7a.onrender.com/delete", {
                 method: "POST", // or 'PUT'
                 headers: {
                     "Content-Type": "application/json",
